@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact</title>
+  <link rel="stylesheet" href="css/style5.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">Laurice</h1>
+    <nav>
+      <a href="Index.html">home</a>
+      <a href="About.html">about</a>
+      <a href="service.html">service</a>
+      <a href="resume.html">resume</a>
+      <a href="portfolio.html">portfolio</a>
+      <a href="contact.html">contact</a>
+    </nav>
+    
+    <div class="icon">
+      <a href="#"><i class="fa-solid fa-heart"></i></a>
+      <a href="#"><i class="fa-solid fa-bars"></i></a>     
+    </div>
+</header>
+
+<section class="contact" id="contact">
+    <h1 class="heading">contact <span>me</span></h1>
+    <form action="#">
+       <div class="input-box">
+          <input type="text" placeholder="full name">
+          <input type="email" placeholder="email">
+       </div>
+       <div class="input-box">
+          <input type="number" placeholder="your number">
+          <input type="email" placeholder="address">
+       </div>
+    <textarea name="" id="" cols="30" rows="10" placeholder="your message"></textarea>
+     <div class="btn">send message</div>
+    </form>
+  </section>
+
+
+
+<!---------------javascript--------------------->
+<script>
+let navbar = document.querySelector(".navbar");
+let icon = document.querySelector(".fa-bars");
+
+icon.onclick = () =>{
+ navbar.classList.toggle("active")
+}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about</title>
+  <!--link style css-->
+  <link rel="stylesheet" href="css/style1.css">
+  <!---add link font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Laurice</h1>
+        <nav>
+          <a href="Index.html">home</a>
+          <a href="About.html">about</a>
+          <a href="service.html">service</a>
+          <a href="resume.html">resume</a>
+          <a href="portfolio.html">portfolio</a>
+          <a href="contact.html">contact</a>
+        </nav>
+        <div class="icon">
+          <a href="#"><i class="fa-solid fa-heart"></i></a>
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
+          
+        </div>
+    </header>
+
+  <section class="skills">
+    <div class="iconCLR">
+      <i class="fa-solid fa-gear"></i>
+      <div class="CLR">
+        <span style="background-color: #0f0; " data-color="green"></span>
+        <span style="background-color: #0ef;" data-color="blue"></span>
+        <span style="background-color: #f00;" data-color="red"></span>
+        <span style="background-color: orange;" data-color="purple"></span>
+      </div>
+
+    </div>
+    <div class="imges">
+      <span></span>
+      <span></span>
+      <img src="css/images/inday.png" alt="">
+    </div>
+    <div class="content">
+      <h1> my <span >skills</span></h1>
+      <p>To secure a challenging position in a reputable organization to expand my learnings,<br>and skills. A highly organized and hard-working individual looking <br>for a responsible position to gain practical experience</p>
+
+      <div class="container">
+        <div class="parent">
+          <h4>html</h4>
+          <div class="gr-card">
+            <div class="card Change" per="90%" style="max-width: 90%;"></div>
+          </div>
+        </div>
+
+        <div class="parent">
+          <h4>css</h4>
+          <div class="gr-card">
+            <div class="card Change" per="70%" style="max-width: 70%;"></div>
+          </div>
+        </div>
+
+        <div class="parent">
+          <h4>javascript</h4>
+          <div class="gr-card">
+            <div class="card Change" per="10%" style="max-width: 50%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <script>
+    document.body.classList.add(localStorage.getItem("pagecolor"));
+
+let element = document.querySelectorAll(".CLR  span");
+let clrArray = [];
+
+// loop on Element
+for (let i = 0; i < element.length; i++){
+
+   clrArray.push(element[i].getAttribute("data-color"));
+
+   element[i].addEventListener("click", function () {
+      //remove old classes
+      document.body.classList.remove(...clrArray)
+      //Add current class from a data attribute
+      document.body.classList.add(element[i].getAttribute("data-color"));
+
+        // add data to local storage
+   localStorage.setItem("pagecolor", element[i].getAttribute("data-color"));
+   })
+}
+  </script>
+</body>
+
+</html>
